@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Voice to text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Voice to text</h1>
+        <p class="pfirst">click mic to speak</p>
+        <form action="/speech" method="post">
+          <button type="submit"><i class="fas fa-microphone"></i></button>
+        </form>
+        <p class="plast">Your text :</p>
+        <div class="result">
+            {{result}}
+            {{error}}
+            {{ reply}}
+        </div>
+
+    </div>
+
+</body>
+<script src="https://kit.fontawesome.com/f6b5a1856e.js" crossorigin="anonymous"></script>
+</html>
