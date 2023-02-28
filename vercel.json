@@ -1,14 +1,15 @@
 {
+  "name" : "voiceproject",
   "builds": [
     {
-      "src": "voice_to_text/app.py",
-      "use": "@vercel/python"
+      "src": "*py",
+      "use": "@liudonghua123/now-flask"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "voice_to_text/app.py"
+      "src": "(.*)",
+      "dest": "app.py"
     }
   ]
 }
